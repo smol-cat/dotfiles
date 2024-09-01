@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Terminate already running bar instances
+killall -q polybar
+# If all your bars have ipc enabled, you can also use
+# polybar-msg cmd quit
+
+sleep 2
+
+PRIMARY=$(xrandr --query | grep " connected" | grep "primary" | cut -d" " -f1)
+OTHERS=$(xrandr --query | grep " connected" | grep -v "primary" | cut -d" " -f1)
+
+if [[ ! -z "$PRIMARY" ]]; then
+  MONITOR=$PRIMARY polybar --reload example & disown
+fi
+
+sleep 0.3
+
+# Launch Polybar, using default config location ~/.config/polybar/config.ini
+if type "xrandr"; then
+  for m in $OTHERS; do
+    MONITOR=$m polybar --reload example & disown
+  done
+else
+  polybar --reload example & disown
+fi
+
+echo "Polybar launched..."

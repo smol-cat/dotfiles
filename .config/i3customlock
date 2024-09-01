@@ -1,0 +1,2 @@
+#!/bin/sh
+i3lock -i ~/Pictures/turqoise.jpg -k --line-color=#58cedb --inside-color=#100524 --ring-color=#58cedb --time-color=#58cedb --date-color=#58cedb

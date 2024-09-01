@@ -1,0 +1,61 @@
+URxvt.font: xft:JetBrains Mono, 8px
+URxvt.boldFont:  xft:JetBrains Mono:style=Bold, 8px
+URxvt.italicFont:  xft:JetBrains Mono:style=Italic, 8px
+URxvt.boldItalicFont: xft:JetBrains Mono:style=Bold Italic, 8px
+
+URxvt.depth: 32
+URxvt.scrollBar: False
+! #100524 dark violet
+! #110917 new dark violet 17, 9, 23
+! #ffb152 main gold  255, 177, 82
+! special
+URxvt.background:   rgba:1100/0900/1700/CC00
+! special
+*.foreground:   #ffb152
+*.cursorColor:  #ffb152
+
+! black
+*.color0:       #522642
+*.color8:       #dd875a
+
+! red
+*.color1:       #573151
+*.color9:       #c876a1
+
+! green
+*.color2:       #724976
+*.color10:      #cb518b
+
+! yellow
+*.color3:       #785a87
+*.color11:      #3fe0b3
+
+! blue
+*.color4:       #816c9c
+*.color12:      #44b4bf
+
+! magenta
+*.color5:       #ad9dd0
+*.color13:      #d668d3
+
+! cyan
+*.color6:       #d2c3e9
+*.color14:      #9b55ba
+
+! white
+*.color7:       #ece5ff
+*.color15:      #6bc5d5
+
+
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+URxvt.perl-ext-common: font-size
+
+URxvt.keysym.C-Up:     font-size:increase
+URxvt.keysym.C-Down:   font-size:decrease
+URxvt.keysym.C-S-Up:   font-size:incglobal
+URxvt.keysym.C-S-Down: font-size:decglobal
+URxvt.keysym.C-equal:  font-size:reset
+URxvt.keysym.C-slash:  font-size:show
